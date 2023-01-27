@@ -16,10 +16,12 @@ function Home() {
     const [highRated, setHighRated] = useState([])
     const [trending,setTrending] = useState([])
 
-    const movieData = useContext(MovieContext);
+    const movieInfo = useContext(MovieContext);
+
     // const firstName = useContext();
     useEffect(() => {
-        console.log(movieData);
+        movieInfo.update({id:'1', title: 'Kantara', desciption: 'A Good Movie'});
+        
         const upcomigFetch = async () => {
 
             try {
@@ -108,9 +110,7 @@ function Home() {
     return (
         <div>
             <div className='banner' style={{backgroundImage:`url("https://image.tmdb.org/t/p/original/${popular.results[0].poster_path}")`}} >
-              {
-                console.log(popular.results[0].poster_path)
-              }
+              
             </div>
             <h2 className='title'> Upcoming Movies </h2>
             <Card arr={upcoming} />
@@ -129,7 +129,9 @@ function Home() {
            {/* <firstName.provider >
               <TvShows value={"very popular"} />
            </firstName.provider> */}
+        
         </div>
+        
     )
 }
 

@@ -3,18 +3,14 @@ import MovieContext from "./MovieContext";
 
 const MovieState = (props) => {
 
-    const [movieData, setMovieData] = useState({
-        id: '1',
-        title: 'Kantara',
-        description: 'Movie Of A Tribal Land - King - God'
-    });
+    const [movieData, setMovieData] = useState({});
 
-    // const update = () => {
-
-    // }
+    const update = (movie) => {
+        setMovieData(movie);
+    }
 
     return (
-        <MovieContext.Provider value = {{movieData}}>
+        <MovieContext.Provider value = {{movieData, update}}>
             {props.children}
         </MovieContext.Provider>
     );
