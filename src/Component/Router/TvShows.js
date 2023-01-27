@@ -5,7 +5,7 @@ function TvShows() {
   const movieInfo = useContext(MovieContext);
   // const name = useState(firstName);
   useEffect(() => {
-    console.log(movieInfo);
+    console.log(movieInfo );
   }, []);
   return (
     <h1>name</h1>
