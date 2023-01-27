@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import "./Home.css"
 import Card from '../Card/Card';
 import TvShows from '../Router/TvShows';
+import MovieContext from '../../Context/MovieContext';
 function Home() {
     const urlUpcomig = "https://api.themoviedb.org/3/movie/upcoming?api_key=82f112e2551f5794e06374be9d493cad&language=en-US&page=1"
     const urlPopular = "https://api.themoviedb.org/3/movie/popular?api_key=82f112e2551f5794e06374be9d493cad&language=en-US&page=1"
@@ -14,8 +15,11 @@ function Home() {
     const [nowPlayingState, setNowPlaying] = useState([]);
     const [highRated, setHighRated] = useState([])
     const [trending,setTrending] = useState([])
+
+    const movieData = useContext(MovieContext);
     // const firstName = useContext();
     useEffect(() => {
+        console.log(movieData);
         const upcomigFetch = async () => {
 
             try {

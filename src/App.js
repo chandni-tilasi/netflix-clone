@@ -4,9 +4,11 @@ import Header from './Component/Header/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Component/Home/Home';
 import TvShows from './Component/Router/TvShows';
+import MovieState from './Context/MovieState';
 function App() {
   return (
     <div className='app-contain' >
+      <MovieState>
       <Router>
         <Header />
         <Routes>
@@ -14,7 +16,7 @@ function App() {
           <Route path="/tvshows" element={<TvShows />} />
         </Routes>
       </Router>
-      {/* <Home /> */}
+      </MovieState>
     </div>
 
   );
