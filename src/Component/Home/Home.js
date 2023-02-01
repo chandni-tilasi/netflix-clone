@@ -89,13 +89,18 @@ function Home() {
     return <h1 style={{ textAlign: "center" }}> LOADING...... </h1>;
   }
 
-  return (
-    <div>
-      <img
-        src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path}`}
+  return ( <>
+    <div style={{display:"flex"}}>
+     
+     <p style={{width:"400px"}}> Today on 05th January 2023 Wildlife Institute of India (WII), Dehradun, signed a ‘Memorandum of Understanding’ (MoU) with the Export Promotion Council for Handicrafts (EPCH), New Delhi, for setting up a ‘Pashmina Testing Facility’ in WII in the presence of the Additional Director General (Wildlife), </p>
+     <img
+     
+        src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[1].poster_path}`}
         className="banner"
         alt="1"
       />
+      </div>
+    <div>
       <h2 className="title"> Upcoming Movies </h2>
       <Card arr={movieInfo.upcoming} />
 
@@ -109,8 +114,9 @@ function Home() {
       <Card arr={movieInfo.highRated} />
       <h2 className="title"> Trending </h2>
       <Card arr={movieInfo.trending} />
-    </div>
+    </div></>
   );
+  
 }
 
 export default Home;

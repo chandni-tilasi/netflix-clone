@@ -14,7 +14,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/upcoming" element={<Upcoming />} />
+            <Route path="/:path" element={<Upcoming />} />
           </Routes>
         </Router>
       </MovieState>
