@@ -11,10 +11,10 @@ function Header() {
       <img className='logo' src={logo} alt="logo" />
 
       <div className='anchorTag'>
-        <Link to="/tvshows" >TvShows</Link>
-        <Link to="/movies" >Movies</Link>
-        <Link to="/recent" >Recently Added</Link>
-        <Link to="/home" >My List</Link>
+        <Link to="/upcoming" >upcoming</Link>
+        <Link to="/popular" >popular</Link>
+        <Link to="/highrated" >High Rated</Link>
+        <Link to="/trending" >Trending</Link>
       </div>
      <p className='iconSearch'>  <FaSearch  /> </p>
     </div>

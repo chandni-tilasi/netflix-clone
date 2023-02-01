@@ -3,8 +3,9 @@ import React from 'react';
 import Header from './Component/Header/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Component/Home/Home';
-import TvShows from './Component/Router/TvShows';
+
 import MovieState from './Context/MovieState';
+import Upcoming from './Component/Router/Upcoming';
 function App() {
   return (
     <div className='app-contain' >
@@ -13,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tvshows" element={<TvShows />} />
+          <Route path='/upcoming' element={<Upcoming />} />
         </Routes>
       </Router>
       </MovieState>
