@@ -7,9 +7,7 @@ function Upcoming() {
   const [moviedata, setMovieData] = useState([]);
   const params = useParams();
 
-  // const url = `https://api.themoviedb.org/3/movie/${params.path}?api_key=82f112e2551f5794e06374be9d493cad&language=en-US&page=1"`
-
-  // console.log(url)
+  console.log(params.path)
   useEffect(() => {
     const upcomigFetch = async () => {
       try {

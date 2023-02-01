@@ -13,7 +13,7 @@ function Header() {
       <div className='anchorTag'>
         <Link to="/upcoming" >upcoming</Link>
         <Link to="/popular" >popular</Link>
-        <Link to="/highrated" >High Rated</Link>
+        <Link to="/top_rated" >High Rated</Link>
         <Link to="/trending" >Trending</Link>
       </div>
      <p className='iconSearch'>  <FaSearch  /> </p>
