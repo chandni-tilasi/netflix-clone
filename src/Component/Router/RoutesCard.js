@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./RoutesCard.css"
 function RoutesCard(props) {
   const results = props.arr.results;
   return (

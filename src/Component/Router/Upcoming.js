@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 function Upcoming() {
   const [moviedata, setMovieData] = useState([]);
+  const [loader,setLoader] = useState(false)
   const params = useParams();
 
   console.log(params.path)
@@ -17,6 +18,7 @@ function Upcoming() {
         const data = await response.json();
         console.log(data + "heyyyyyyyyyyy");
         setMovieData(data);
+        setLoader(true)
         // setLoader(true);
       } catch (err) {
         console.log("error hai bhai");
@@ -26,6 +28,9 @@ function Upcoming() {
   }, []);
 
   // const upcomingInfo = useContext(MovieContext);
+  if(!loader){
+    return <h1>loading...</h1>
+  }
 
   return <>{moviedata && <RoutesCard arr={moviedata} />}</>;
 }
