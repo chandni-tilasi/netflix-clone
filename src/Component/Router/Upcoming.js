@@ -23,7 +23,7 @@ function Upcoming() {
       }
     };
     upcomigFetch();
-  }, []);
+  }, [params.path]);
 
   // const upcomingInfo = useContext(MovieContext);
   if (!loader) {
