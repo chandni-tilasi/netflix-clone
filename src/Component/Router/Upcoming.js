@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
-import MovieContext from "../../Context/MovieContext";
+import React, { useEffect, useState } from "react";
 import RoutesCard from "./RoutesCard";
 import { useParams } from "react-router-dom";
 
 function Upcoming() {
   const [moviedata, setMovieData] = useState([]);
-  const [loader,setLoader] = useState(false)
+  const [loader, setLoader] = useState(false);
   const params = useParams();
 
-  console.log(params.path)
+  console.log(params.path);
   useEffect(() => {
     const upcomigFetch = async () => {
       try {
@@ -16,20 +15,19 @@ function Upcoming() {
           `https://api.themoviedb.org/3/movie/${params.path}?api_key=82f112e2551f5794e06374be9d493cad&language=en-US&page=1`
         );
         const data = await response.json();
-        console.log(data + "heyyyyyyyyyyy");
+
         setMovieData(data);
-        setLoader(true)
-        // setLoader(true);
+        setLoader(true);
       } catch (err) {
-        console.log("error hai bhai");
+        console.log("Couldn't Fetch Data");
       }
     };
     upcomigFetch();
   }, []);
 
   // const upcomingInfo = useContext(MovieContext);
-  if(!loader){
-    return <h1>loading...</h1>
+  if (!loader) {
+    return <h1>loading...</h1>;
   }
 
   return <>{moviedata && <RoutesCard arr={moviedata} />}</>;
