@@ -83,30 +83,34 @@ function Home() {
     };
 
     trendingFun();
-  }, []);
+  }, [movieInfo]);
 
   if (!loader) {
-    return <h1 style={{ textAlign: "center" }}> LOADING...... </h1>;
+    return <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "300px" }}> LOADING...... </h1>;
   }
 
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <div className="forSpace"></div>
+      {/* <div className="bannerContainer" style={{ display: "flex", backgroundImage: `url(https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path})` }}> */}
+      <div className="bannerContainer">
+        {/* <h2> {movieInfo.popular.results[0].title} </h2>
         <p style={{ width: "400px" }}>
-          {" "}
-          Today on 05th January 2023 Wildlife Institute of India (WII),
-          Dehradun, signed a ‘Memorandum of Understanding’ (MoU) with the Export
-          Promotion Council for Handicrafts (EPCH), New Delhi, for setting up a
-          ‘Pashmina Testing Facility’ in WII in the presence of the Additional
-          Director General (Wildlife),{" "}
-        </p>
-        {movieInfo && (
+          {movieInfo.popular.results[1].overview}
+        </p> */}
+        {/* {movieInfo && (
           <img
-            src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[1].poster_path}`}
+            src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path}`}
             className="banner"
             alt="1"
           />
-        )}
+        )} */}
+        <div className="content">
+        <h1> {movieInfo.popular.results[0].title} </h1>
+        <p> {movieInfo.popular.results[0].overview} </p>
+        </div>
+        <img className="bannerImg" src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path}`} />
+
       </div>
       <div>
         <h2 className="title"> Upcoming Movies </h2>

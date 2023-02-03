@@ -7,18 +7,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Rubik:wght@300&display=swap');
 
 .logo {
-    height: 100px;
-    width: 150px;
+    height: 50px;
+    width: 100px;
 }
 
 .headerComponent {
     display: flex;
     background-color: black;
-    justify-content: space-around;
-    height: 14vh;
+    height: 10vh;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    ;
+    padding: 3%;
+    position: fixed;
+    width: 100%;
+
 
 }
 
@@ -37,8 +39,9 @@
 
 .iconSearch {
     color: white;
-    margin-right: 7%;
+    /* margin-right: 7%; */
     font-size: 1.5rem;
+    cursor: pointer;
 
 }
 
@@ -46,11 +49,74 @@
     color: rgb(255, 77, 0);
 }
 
-.banner {
+/* .banner {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
+    margin-top: 50px;
     
+
+} */
+
+.burger {
+    display: none;
+}
+
+.cross {
+    display: none;
+}
+
+@media screen and (max-width: 655px) {
+    .headerComponent {
+        background-color: black;
+        justify-content: space-between;
+
+    }
+
+    .burger {
+        display: block;
+        color: white;
+        cursor: pointer;
+
+        font-size: 1.5rem;
+    }
+
+    .anchorTag {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(32, 47, 42);
+        height: 300px;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        transform: 5.5s;
+    }
+
+    .anchorTag a:hover {
+        border: 5px gray solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .iconSearch {
+        display: none;
+    }
+
+    .cross {
+        display: block;
+        cursor: pointer;
+    }
+
+    #active {
+        display: none;
+    }
+
 
 }

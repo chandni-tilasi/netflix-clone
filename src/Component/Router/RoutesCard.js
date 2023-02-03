@@ -5,15 +5,8 @@ function RoutesCard(props) {
   return (
     <div>
       <div className="routesContainer">
-        {/* {obj.map((ele) => {
-          return (
-            <img
-              key={ele.id}
-              src={`https://image.tmdb.org/t/p/original/${ele.poster_path}`}
-            />
-          );
-        })} */}
-        {console.log(results)};
+{/*         
+        {console.log(results)}; */}
         {results &&
           results.map((el) => (
             <div key={el.id}>

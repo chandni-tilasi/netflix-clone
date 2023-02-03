@@ -5,10 +5,12 @@
   }
   
   .routesContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-   
-    
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr ; */
+   /* justify-content: space-around;
+   align-items: space-around; */
+   justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .routesContainer img {
     width: 200px;
@@ -28,3 +30,7 @@
     cursor: pointer;
   }
   
+  .forSpace{
+    
+    height: 70px;
+  }

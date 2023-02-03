@@ -3,13 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
-.banner {
-  height: 45vh;
-  width: 50%;
-  background-color: aqua;
+
+
+.forSpace {
+  background-color: red;
+  height: 200px;
 }
 
-.title {
-  text-align: center;
-  margin-top: 10px;
+.bannerImg{
+  height: 300px;
+  width: 400px;
+}
+
+.bannerContainer{
+  height: 50vh;
+  margin-top: 20px;
+  background-color: rgb(250, 215, 215);
+  display: flex;
+  justify-content: space-around;
+}
+
+.content{
+  width: 800px;
 }
