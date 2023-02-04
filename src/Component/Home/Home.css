@@ -10,12 +10,12 @@
   height: 200px;
 }
 
-.bannerImg{
+.bannerImg {
   height: 300px;
   width: 400px;
 }
 
-.bannerContainer{
+.bannerContainer {
   height: 50vh;
   margin-top: 20px;
   background-color: rgb(250, 215, 215);
@@ -23,6 +23,6 @@
   justify-content: space-around;
 }
 
-.content{
+.content {
   width: 800px;
 }
