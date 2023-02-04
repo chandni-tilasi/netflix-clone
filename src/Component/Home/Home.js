@@ -3,6 +3,7 @@ import "./Home.css";
 import Card from "../Card/Card";
 // import TvShows from '../Router/TvShows';
 import MovieContext from "../../Context/MovieContext";
+import Slider from "./Slider";
 function Home() {
   const urlUpcomig =
     "https://api.themoviedb.org/3/movie/upcoming?api_key=82f112e2551f5794e06374be9d493cad&language=en-US&page=1";
@@ -83,7 +84,7 @@ function Home() {
     };
 
     trendingFun();
-  }, [movieInfo]);
+  }, []);
 
   if (!loader) {
     return <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "300px" }}> LOADING...... </h1>;
@@ -92,8 +93,9 @@ function Home() {
   return (
     <>
       <div className="forSpace"></div>
+      <Slider />
       {/* <div className="bannerContainer" style={{ display: "flex", backgroundImage: `url(https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path})` }}> */}
-      <div className="bannerContainer">
+      {/* <div className="bannerContainer"> */}
         {/* <h2> {movieInfo.popular.results[0].title} </h2>
         <p style={{ width: "400px" }}>
           {movieInfo.popular.results[1].overview}
@@ -105,13 +107,14 @@ function Home() {
             alt="1"
           />
         )} */}
-        <div className="content">
+        {/* <div className="content">
         <h1> {movieInfo.popular.results[0].title} </h1>
         <p> {movieInfo.popular.results[0].overview} </p>
         </div>
         <img className="bannerImg" src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path}`} />
 
-      </div>
+      </div> */}
+      
       <div>
         <h2 className="title"> Upcoming Movies </h2>
         <Card arr={movieInfo.upcoming} />
