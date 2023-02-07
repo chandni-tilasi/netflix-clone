@@ -92,7 +92,7 @@ function Home() {
 
   return (
     <>
-      <div className="forSpace"></div>
+      
       <Slider />
       {/* <div className="bannerContainer" style={{ display: "flex", backgroundImage: `url(https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path})` }}> */}
       {/* <div className="bannerContainer"> */}
