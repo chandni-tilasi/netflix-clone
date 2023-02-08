@@ -14,7 +14,7 @@ function Header() {
   function clickHandler(){
     setHamburger(!showHamburger);
   }
-
+  // https://api.themoviedb.org/3/movie/now_playing?api_key=82f112e2551f5794e06374be9d493cad&language=en-US&page=1
   return (
     <div className='headerComponent'>
       <Link to="/" ><img className='logo' src={logo} alt="logo" /></Link>
@@ -22,8 +22,8 @@ function Header() {
       <div className='anchorTag' id={(!showHamburger)?"active":null}>
         <Link to="/upcoming" >Upcoming</Link>
         <Link to="/popular" >Popular</Link>
-        <Link to="/top_rated" >High Rated</Link>
-        <Link to="/trending" >Trending</Link>
+        <Link to="/top_rated" >Top Rated</Link>
+        <Link to="/now_playing" >now playing</Link>
       </div>
      <p className='iconSearch'>  <FaSearch  /> </p>
      <p className='burger' onClick={clickHandler} > {(!showHamburger)? <GiHamburgerMenu />:<RxCross1 />}    </p>

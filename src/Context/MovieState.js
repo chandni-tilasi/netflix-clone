@@ -11,7 +11,7 @@ const MovieState = (props) => {
     const [nowPlaying, setNowPlaying] = useState([]);
     const [highRated, setHighRated] = useState([])
     const [trending,setTrending] = useState([])
-
+    const [searchData,forSearchData] = useState([]);
    function updateUpcomig(data){
     setComing(data);
    }
