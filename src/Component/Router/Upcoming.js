@@ -54,7 +54,7 @@ function Upcoming() {
   }
 
   return <>
-  <div className="forSpace"></div>
+  {/* <div className="forSpace"></div> */}
   {moviedata && <RoutesCard arr={moviedata} />}
   </>;
 }
