@@ -6,6 +6,8 @@ import Home from "./Component/Home/Home";
 
 import MovieState from "./Context/MovieState";
 import Upcoming from "./Component/Router/Upcoming";
+import "./App.css";
+
 function App() {
   return (
     <div className="app-contain">

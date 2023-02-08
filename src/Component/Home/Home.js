@@ -87,34 +87,25 @@ function Home() {
   }, []);
 
   if (!loader) {
-    return <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "300px" }}> LOADING...... </h1>;
+    return (
+      <h1
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "300px",
+        }}
+      >
+        {" "}
+        LOADING......{" "}
+      </h1>
+    );
   }
 
   return (
     <>
-      
       <Slider />
-      {/* <div className="bannerContainer" style={{ display: "flex", backgroundImage: `url(https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path})` }}> */}
-      {/* <div className="bannerContainer"> */}
-        {/* <h2> {movieInfo.popular.results[0].title} </h2>
-        <p style={{ width: "400px" }}>
-          {movieInfo.popular.results[1].overview}
-        </p> */}
-        {/* {movieInfo && (
-          <img
-            src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path}`}
-            className="banner"
-            alt="1"
-          />
-        )} */}
-        {/* <div className="content">
-        <h1> {movieInfo.popular.results[0].title} </h1>
-        <p> {movieInfo.popular.results[0].overview} </p>
-        </div>
-        <img className="bannerImg" src={`https://image.tmdb.org/t/p/original/${movieInfo.popular.results[0].poster_path}`} />
 
-      </div> */}
-      
       <div>
         <h2 className="title"> Upcoming Movies </h2>
         <Card arr={movieInfo.upcoming} />

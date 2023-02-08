@@ -5,6 +5,7 @@
 }
 
 .card {
+  background: black;
   display: flex;
   overflow-x: auto;
 }
@@ -19,6 +20,12 @@
   border: 2px solid gray;
   margin-left: 10px;
   transition: transform 0.5s;
+}
+
+.card {
+  display: flex;
+  overflow-x: auto;
+  flex-direction: row-reverse;
 }
 
 .card img:hover {
