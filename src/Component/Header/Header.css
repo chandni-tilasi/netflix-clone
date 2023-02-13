@@ -102,9 +102,15 @@ input:focus {
     .headerComponent {
         background-color: black;
         justify-content: space-between;
-
+        
     }
 
+    .iconSearch .headerSearch{
+        display: none;
+    }
+    .iconSearch{
+        display: none;
+    }
     .burger {
         display: block;
         color: white;
@@ -121,7 +127,7 @@ input:focus {
         right: 0;
         display: flex;
         flex-direction: column;
-        background-color: rgb(32, 47, 42);
+        background-color: black;
         height: 300px;
         margin: 0;
         justify-content: center;
