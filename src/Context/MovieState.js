@@ -14,7 +14,7 @@ const MovieState = (props) => {
     const [searchData,forSearchData] = useState([]);
     const [allMovieData,setAllMovieData] = useState([]);
     const [searchText,setSearchText] = useState("");
-    console.log(trending);
+    
     function updateSearchText(data){
         setSearchText(data);
     }
