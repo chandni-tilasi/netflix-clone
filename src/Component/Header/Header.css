@@ -46,9 +46,6 @@
 
 }
 
-.iconSearch:hover {
-    color: rgb(255, 77, 0);
-}
 
 /* .banner {
     background-size: cover;
@@ -67,8 +64,41 @@
 .cross {
     display: none;
 }
+.iconSearch{
+    display: flex;
+    border: 2px rgb(184, 132, 132) solid;
+    height: 30px;
+    padding: 1px;
+    border-radius: 25px;
+    color: black;
+    background-color: white;
+   /* border-top: none;
+   border-left: none; */
+   /* border-right: none; */
+   
+}
+.iconSearch .headerSearch{
+    padding: 3px;
+    border-radius: 25px;
+    border-style: none;
+    /* background-color: black; */
+   border-style: none;
+   width: 200px;
+   font-size: 20px;
+ border-top: none;
+   border-left: none; 
+   border-right: none;
+   
+}
+input:focus {
+    border-style: none;
 
-@media screen and (max-width: 655px) {
+  }
+::placeholder{
+    font-size: 17px;
+    text-align: center;
+}
+@media screen and (max-width: 940px) {
     .headerComponent {
         background-color: black;
         justify-content: space-between;
@@ -106,10 +136,7 @@
         border-right: none;
     }
 
-    .iconSearch {
-        display: none;
-    }
-
+    
     .cross {
         display: block;
         cursor: pointer;

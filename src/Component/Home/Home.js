@@ -101,6 +101,7 @@ function Home() {
       </h1>
     );
   }
+  console.log(movieInfo)
 
   return (
     <>

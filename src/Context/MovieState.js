@@ -12,31 +12,44 @@ const MovieState = (props) => {
     const [highRated, setHighRated] = useState([])
     const [trending,setTrending] = useState([])
     const [searchData,forSearchData] = useState([]);
+    const [allMovieData,setAllMovieData] = useState([]);
+    const [searchText,setSearchText] = useState("");
+    console.log(trending);
+    function updateSearchText(data){
+        setSearchText(data);
+    }
+
    function updateUpcomig(data){
     setComing(data);
+    setAllMovieData([...allMovieData,data])
    }
 
    function updatePopular(data){
     setPopular(data);
+    setAllMovieData([...allMovieData,data])
    }
 
    function updateNowPlaying(data){
     setNowPlaying(data);
+    setAllMovieData([...allMovieData,data])
    }
 
    function updateHighRated(data){
     setHighRated(data);
+    setAllMovieData([...allMovieData,data])
    }
 
 function updateTrending(data){
     setTrending(data);
+    setAllMovieData([...allMovieData,data])
 }
 
 
 
 
+
     return (
-        <MovieContext.Provider value = {{upcoming,updateUpcomig,popular,updatePopular,nowPlaying,updateNowPlaying,highRated,updateHighRated,trending,updateTrending}
+        <MovieContext.Provider value = {{upcoming,updateUpcomig,popular,updatePopular,nowPlaying,updateNowPlaying,highRated,updateHighRated,trending,updateTrending,allMovieData,searchText,updateSearchText}
     }>
             {props.children}
         </MovieContext.Provider>
